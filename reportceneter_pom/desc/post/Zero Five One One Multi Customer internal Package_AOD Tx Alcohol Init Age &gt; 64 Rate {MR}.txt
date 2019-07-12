@@ -1,0 +1,54 @@
+AOD Tx Alcohol Init Age > 64 Rate {MR} = Patients AOD Tx Alcohol Init Age > 64 Num {MR}/Patients AOD Tx Alcohol Init Age > 64 Den {MR}
+AOD Tx Alcohol Init Age > 64 Rate {MR} is the percentage of patients, aged 65 years and older, with a new episode of alcohol abuse or dependence who initiated treatment within 14 days of the diagnosis. This excludes patients who used hospice services during the measurement year. This measure is based on results returned by the Rules Engine for the Alcohol and Drug Depen Tx Alcohol Init Mcd Adlt rule. Sources: Based on NCQA Measure ID - IET; NQF (endorser); NCQA (owner) 2018
+Rule based measure (12/31/1998, 12/31/1999, 03/31/2000)
+Standard measures/Rule Measures/Medicaid Focus/Behavioral Health/AOD Tx Alcohol Init Age > 64 Rate {MR} medstat09/24/2018
+Patients AOD Tx Alcohol Init Age > 64 Num {MR} = Quality Measure Base Numerator {QM} Constrained by Alcohol Drug Tx Alcohol Initiation Age > 64 {MS}
+Patients AOD Tx Alcohol Init Age > 64 Num {MR} is the percentage of patients, aged 65 years and older, with a new episode of alcohol abuse or dependence who initiated treatment within 14 days of the diagnosis. This excludes patients who used hospice services during the measurement year. This measure is the numerator results returned by the Rules Engine for the AOD Tx Alcohol Init Age > 64 Rate measure. Sources: Based on NCQA Measure ID - IET; NQF (endorser); NCQA (owner) 2018
+Rule based measure (12/31/1998, 12/31/1999, 03/31/2000)
+Standard measures/Rule Measures/Medicaid Focus/Behavioral Health/Components/Patients AOD Tx Alcohol Init Age > 64 Num {MR} medstat06/04/2018
+Quality Measure Base Numerator {QM} = Quality Measure Base Numerator {Gap} Constrained by Rule CE Met Ind EQ Y
+Quality Measure Base Numerator {QM} is the base numerator for all quality measures used in performance assessment. This measure is derived from Rules Engine output and is based on a rule that includes continuous enrollment criteria.
+Rule based measure (Requires rule dimension on report)
+Standard measures/Rule Measures/QM Base Components/Quality Measure Base Numerator {QM} medstat06/19/2006
+Quality Measure Base Numerator {Gap}=Count Distinct of Volumetric[Rule Date Numerator ID]
+Quality Measure Base Numerator {Gap} is the base numerator for all quality measures used in gaps in care reporting. This measure is derived from Rules Engine output and is based on a rule that excludes continuous enrollment criteria.
+Rule based measure (Requires rule dimension on report)
+Standard measures/Rule Measures/QM Base Components/Quality Measure Base Numerator {Gap} medstat10/18/2011
+Rule CE Met Ind EQ Y
+Rule CE Met Ind EQ Y identifies all patients who meet rule continuous enrollment criteria. This is used in the calculation of the {QM} measures. This is a hidden subset.
+Eligibility Supported , DCG Related
+Standard subsets/Hidden/Rule CE Met Ind EQ Y medstat 04/16/2010
+Rule CE Met Indicator = Y
+Alcohol Drug Tx Alcohol Initiation Age > 64 {MS}
+Alcohol Drug Tx Alcohol Initiation Age > 64 {MS} identifies the Rules Engine measure that calculates the percentage of patients, aged 64 years and older, with a new episode of alcohol abuse or dependence who initiated treatment within 14 days of the diagnosis. This subset returns results based on the Alcohol and Drug Depen Tx Alcohol Init Mcd Adlt rule. Sources: CMS Adult Core Set for Medicaid Measure ID - IET-AD, March 2018; Based on NCQA Measure ID - IET; NQF (endorser) NCQA (owner) 2018
+Rule based subset (12/31/1998, 12/31/1999, 03/31/2000)
+Standard subsets/Rule Measures/Medicaid Focus/Behavioral Health/Alcohol Drug Tx Alcohol Initiation Age > 64 {MS} medstat 09/24/2018
+Rule Measure Code = 768
+Rule based dimension (12/31/1998, 12/31/1999, 03/31/2000)
+AND
+Age In Years > 64
+Patients AOD Tx Alcohol Init Age > 64 Den {MR} = Quality Measure Base Denominator {QM} Constrained by Alcohol Drug Tx Alcohol Initiation Age > 64 {MS}
+Patients AOD Tx Alcohol Init Age > 64 Den {MR} is the percentage of patients, aged 65 years and older, with a new episode of alcohol abuse or dependence who initiated treatment within 14 days of the diagnosis. This excludes patients who used hospice services during the measurement year. This measure is the denominator results returned by the Rules Engine for the AOD Tx Alcohol Init Age > 64 Rate {MR} measure. Sources: Based on NCQA Measure ID - IET; NQF (endorser); NCQA (owner) 2018
+Rule based measure (12/31/1998, 12/31/1999, 03/31/2000)
+Standard measures/Rule Measures/Medicaid Focus/Behavioral Health/Components/Patients AOD Tx Alcohol Init Age > 64 Den {MR} medstat06/04/2018
+Quality Measure Base Denominator {QM} = Quality Measure Base Denominator {Gap} Constrained by Rule CE Met Ind EQ Y
+Quality Measure Base Denominator {QM} is the base denominator for all quality measures used in performance assessment. This measure is derived from Rules Engine output and is based on a rule that includes continuous enrollment criteria.
+Rule based measure (Requires rule dimension on report)
+Standard measures/Rule Measures/QM Base Components/Quality Measure Base Denominator {QM} medstat06/19/2006
+Quality Measure Base Denominator {Gap}=Count Distinct of Volumetric[Rule Date Denominator ID]
+Quality Measure Base Denominator {Gap} is the base denominator for all quality measures used in gaps in care reporting. This measure is derived from Rules Engine output and is based on a rule that excludes continuous enrollment criteria.
+Rule based measure (Requires rule dimension on report)
+Standard measures/Rule Measures/QM Base Components/Quality Measure Base Denominator {Gap} medstat10/18/2011
+Rule CE Met Ind EQ Y
+Rule CE Met Ind EQ Y identifies all patients who meet rule continuous enrollment criteria. This is used in the calculation of the {QM} measures. This is a hidden subset.
+Eligibility Supported , DCG Related
+Standard subsets/Hidden/Rule CE Met Ind EQ Y medstat 04/16/2010
+Rule CE Met Indicator = Y
+Alcohol Drug Tx Alcohol Initiation Age > 64 {MS}
+Alcohol Drug Tx Alcohol Initiation Age > 64 {MS} identifies the Rules Engine measure that calculates the percentage of patients, aged 64 years and older, with a new episode of alcohol abuse or dependence who initiated treatment within 14 days of the diagnosis. This subset returns results based on the Alcohol and Drug Depen Tx Alcohol Init Mcd Adlt rule. Sources: CMS Adult Core Set for Medicaid Measure ID - IET-AD, March 2018; Based on NCQA Measure ID - IET; NQF (endorser) NCQA (owner) 2018
+Rule based subset (12/31/1998, 12/31/1999, 03/31/2000)
+Standard subsets/Rule Measures/Medicaid Focus/Behavioral Health/Alcohol Drug Tx Alcohol Initiation Age > 64 {MS} medstat 09/24/2018
+Rule Measure Code = 768
+Rule based dimension (12/31/1998, 12/31/1999, 03/31/2000)
+AND
+Age In Years > 64
