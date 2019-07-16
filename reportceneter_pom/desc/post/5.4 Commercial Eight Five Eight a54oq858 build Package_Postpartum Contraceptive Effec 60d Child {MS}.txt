@@ -1,5 +1,0 @@
-Postpartum Contraceptive Effec 60d Child {MS} identifies the Rules Engine measure that calculates the percentage of women, aged 15-20 years, who had a live birth and were provided a ‘most effective’ or a ‘moderately effective’ FDA-approved method of contraception within 60 days of delivery. Most effective methods include sterilization, IUDs, and implants. Moderately effective methods include injections, oral pills, patches, rings, and diaphragms. This measure excludes women who had a delivery that did not result in a live birth (i.e., miscarriage, ectopic pregnancy, stillbirth, pregnancy termination). This subset returns results based on the Contraceptive Care PostP Effec 60 Days Mcd Child rule measure. Sources: CMS Core Set of Children's Health Care Quality Measures for Medicaid; Measure ID - CCP-CH, March 2018; NQF (endorser); US Office of Population Affairs (owner)
-Rule based subset (12/31/1998, 12/31/1999, 03/31/2000)
-Standard subsets/Rule Measures/Medicaid Focus/Female Reproductive/Postpartum Contraceptive Effec 60d Child {MS} medstat 07/10/2018
-Rule Measure Code = 731
-Rule based dimension (12/31/1998, 12/31/1999, 03/31/2000)

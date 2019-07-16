@@ -18,9 +18,6 @@ WebDriver driver;
 	
 	public AHRW(WebDriver driver){
 		this.driver = driver;
-
-	       
-
         PageFactory.initElements(driver, this);
 	}
 	

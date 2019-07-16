@@ -38,21 +38,20 @@ public class LoginPage{
         PageFactory.initElements(driver, this);
 	}
 	
-	public void login(String username, String pwd){
+	public void login(String username, String pwd,boolean siam){
 		
-		/*System.out.println(txtUserName.isDisplayed());
 		
-		if(txtUserName.isDisplayed()) {
-			
-		txtUserName.sendKeys(username);
-		txtPassword.sendKeys(pwd);
-		btnOK.click();	
-		}
-		else {*/
+		if(siam) {
 			txtUserNameSiam.sendKeys(username);
 			txtPasswordSiam.sendKeys(pwd);
-			btnOKSiam.click();	
+			btnOKSiam.click();
 		
+		}
+		else {
+			txtUserName.sendKeys(username);
+			txtPassword.sendKeys(pwd);
+			btnOK.click();		
+		}
 	}
 	
 

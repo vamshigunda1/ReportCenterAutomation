@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="171155" started-at="2019-07-12T09:10:08Z" finished-at="2019-07-12T09:12:59Z">
+  <suite name="Default suite" duration-ms="240499" started-at="2019-07-16T12:55:24Z" finished-at="2019-07-16T12:59:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="171155" started-at="2019-07-12T09:10:08Z" finished-at="2019-07-12T09:12:59Z">
-      <class name="com.truven.advantagesuite.testcase.ReportCenterDescription">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.truven.advantagesuite.testcase.ReportCenterDescription@7d9d1a19]" name="setup" is-config="true" duration-ms="23200" started-at="2019-07-12T09:10:08Z" finished-at="2019-07-12T09:10:32Z">
+    <test name="Default test" duration-ms="240499" started-at="2019-07-16T12:55:24Z" finished-at="2019-07-16T12:59:24Z">
+      <class name="com.truven.advantagesuite.testcase.NewTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.truven.advantagesuite.testcase.NewTest@5622fdf]" name="setup" is-config="true" duration-ms="14257" started-at="2019-07-16T12:55:24Z" finished-at="2019-07-16T12:55:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="SaveAndCompareDesc()[pri:0, instance:com.truven.advantagesuite.testcase.ReportCenterDescription@7d9d1a19]" name="SaveAndCompareDesc" duration-ms="146903" started-at="2019-07-12T09:10:32Z" finished-at="2019-07-12T09:12:58Z">
+        <test-method status="PASS" signature="SaveAndCompareDesc()[pri:0, instance:com.truven.advantagesuite.testcase.NewTest@5622fdf]" name="SaveAndCompareDesc" duration-ms="226188" started-at="2019-07-16T12:55:38Z" finished-at="2019-07-16T12:59:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SaveAndCompareDesc -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.truven.advantagesuite.testcase.ReportCenterDescription@7d9d1a19]" name="teardown" is-config="true" duration-ms="1000" started-at="2019-07-12T09:12:58Z" finished-at="2019-07-12T09:12:59Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.truven.advantagesuite.testcase.NewTest@5622fdf]" name="teardown" is-config="true" duration-ms="0" started-at="2019-07-16T12:59:24Z" finished-at="2019-07-16T12:59:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.truven.advantagesuite.testcase.ReportCenterDescription -->
+      </class> <!-- com.truven.advantagesuite.testcase.NewTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
