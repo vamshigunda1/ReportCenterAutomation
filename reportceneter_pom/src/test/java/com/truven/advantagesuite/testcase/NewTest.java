@@ -6,6 +6,10 @@ import com.truven.advantagesuite.pages.AHRW;
 import com.truven.advantagesuite.pages.LoginPage;
 import com.truven.advantagesuite.pages.PackageSelection;
 import com.truven.advantagesuite.pages.ReportCreateNSave;
+import com.truven.advantagesuite.pages.RunNSaveReport;
+import com.truven.advantagesuite.pages.SearchMeasureOrSubset;
+import com.truven.advantagesuite.pages.SelectTimePeriod;
+
 import org.testng.annotations.BeforeTest;
 
 import java.io.IOException;
@@ -31,17 +35,19 @@ public class NewTest {
 	  lpage.login("qauser40", "QA0505qa",false);
 	  AHRW reportwriter = new AHRW(driver);
 	  reportwriter.openAdhocRW();
-	  PackageSelection savedesc = new PackageSelection(driver);
-	  savedesc.PackageSelector("Adv zero six five new demo data build Package");
+	  PackageSelection selector = new PackageSelection(driver);
+	  selector.PackageSelector("Adv zero six five new demo data build Package");
 	  		//"Zero Two Two One New Commercial Demo build Package");
-	  ReportCreateNSave rcs = new ReportCreateNSave(driver);
-	  rcs.measureORsubsetORtimeperiod("Patients BMI Assessment Adult Num {QM}");
-	  rcs.measureORsubsetORtimeperiod("Patients BMI Assessment Adult Den {QM}");
-	  rcs.measureORsubsetORtimeperiod("Body Mass Index Adult Rate {QM}");
-	  rcs.measureORsubsetORtimeperiod("Body Mass Index Assessment Adult {QS}");
-	  rcs.TimePeriod();
-	  rcs.runReport();
-	  rcs.saveReport();
+	  SearchMeasureOrSubset rcs = new SearchMeasureOrSubset(driver);
+	  rcs.SearchMeasureorSubset("Patients BMI Assessment Adult Num {QM}");
+	  rcs.SearchMeasureorSubset("Patients BMI Assessment Adult Den {QM}");
+	  rcs.SearchMeasureorSubset("Body Mass Index Adult Rate {QM}");
+	  rcs.SearchMeasureorSubset("Body Mass Index Assessment Adult {QS}");
+	  SelectTimePeriod tp = new SelectTimePeriod(driver);
+	  tp.TimePeriod();
+	  RunNSaveReport rs = new RunNSaveReport(driver);
+	  rs.runReport();
+	  rs.saveReport();
   }
   @AfterTest
   public void teardown () {
