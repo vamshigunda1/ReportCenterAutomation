@@ -5,8 +5,6 @@ import org.testng.annotations.Test;
 import com.truven.advantagesuite.pages.AHRW;
 import com.truven.advantagesuite.pages.LoginPage;
 import com.truven.advantagesuite.pages.PackageSelection;
-import com.truven.advantagesuite.pages.ReportCreation;
-
 import org.testng.annotations.BeforeTest;
 
 import java.io.IOException;
@@ -35,8 +33,7 @@ public class TC1 {
 	  PackageSelection savedesc = new PackageSelection(driver);
 	  savedesc.PackageSelector("Zero Two Two One New Commercial Demo build Package");
 	  //savedesc.SearchMeasureorSubset("Postpartum Contraceptive Effec 60d Adult {MS}");
-	  ReportCreation rc = new ReportCreation(driver);
-	  rc.MeasureDragNDrop();
+	 
 	  
   }
   @AfterTest

@@ -17,7 +17,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ReportCreation  {
+public class SearchDimension  {
 	
 	
 	WebDriver driver;
@@ -28,12 +28,12 @@ public class ReportCreation  {
 	@FindBy(xpath="//*[@id=\"search\"]/div/div/div[2]/button")
 	WebElement SearchBtn;
 
-	public ReportCreation(WebDriver driver){
+	public SearchDimension(WebDriver driver){
 		this.driver = driver;
         PageFactory.initElements(driver, this);
 	}
 
-	public void MeasureDragNDrop() throws InterruptedException, Exception{
+	public void DimensionDragNDrop() throws  Exception{
 		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		File src=new File("C:\\EclipseWorkspace\\ReportCenterAutomation\\reportceneter_pom\\ddlex.xlsx");
@@ -42,32 +42,6 @@ public class ReportCreation  {
 	     XSSFSheet sheet1 = wb.getSheetAt(3);
 			//int x=sheet1.getLastRowNum();
 		for(int i=0;i<1;i++) {
-			
-	     String Measure = sheet1.getRow(i).getCell(0).getStringCellValue();
-	     System.out.println(Measure);
-	    wait.until(ExpectedConditions.elementToBeClickable(SearchBox));
-	    
-	     SearchBox.sendKeys(Measure);
-	     SearchBtn.click();
-	     
-				WebElement sourceLocator = driver.findElement(By.xpath("//*[text()='"+ Measure +"']"));
-				Actions ac = new Actions(driver);
-				ac.moveToElement(sourceLocator).build().perform();
-				Robot robot = new Robot();
-				Point point = sourceLocator.getLocation();
-				int sourceX = point.getX() + 50;
-				int sourceY = point.getY() + 121;
-				System.out.println("cod" + sourceX + "," + sourceY);
-				Thread.sleep(1000);
-				robot.mouseMove(sourceX, sourceY);
-				Thread.sleep(2000);
-				robot.mousePress(InputEvent.BUTTON1_MASK);
-				Thread.sleep(2000);
-				robot.mouseMove(675, 420);
-				Thread.sleep(2000);
-				robot.mouseRelease(InputEvent.BUTTON1_MASK);
-				Thread.sleep(2000);
-				SearchBox.clear();
 				String Dimension = sheet1.getRow(i).getCell(1).getStringCellValue();
 			     System.out.println(Dimension);
 			    wait.until(ExpectedConditions.elementToBeClickable(SearchBox));
@@ -76,9 +50,9 @@ public class ReportCreation  {
 			     SearchBtn.click();
 			     
 						WebElement dimsourceLocator = driver.findElement(By.xpath("//*[text()='"+ Dimension +"']"));
-						//Actions ac = new Actions(driver);
+						Actions ac = new Actions(driver);
 						ac.moveToElement(dimsourceLocator).build().perform();
-						//Robot robot = new Robot();
+						Robot robot = new Robot();
 						Point dimpoint = dimsourceLocator.getLocation();
 						int dimsourceX = dimpoint.getX() + 50;
 						int dimsourceY = dimpoint.getY() + 121;
