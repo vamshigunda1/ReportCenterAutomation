@@ -31,7 +31,7 @@ public class CrossTabReport {
   @Test
   public void CrossTabRep() throws IOException, InterruptedException, Exception {
 	  LoginPage lpage = new LoginPage(driver);
-	  lpage.login("qauser40", "QA0505qa",false);
+	  lpage.login(false);
 	  AHRW reportwriter = new AHRW(driver);
 	  reportwriter.openAdhocRW();
 	  PackageSelection selector = new PackageSelection(driver);
