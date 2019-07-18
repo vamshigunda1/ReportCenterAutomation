@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
-public class NewTest {
+public class CrossTabReport {
 	WebDriver driver;
 	@BeforeTest
     public void setup () {
@@ -29,7 +29,7 @@ public class NewTest {
         //https://ahrwqa-libra.truvenhealth.com/
     }
   @Test
-  public void SaveAndCompareDesc() throws IOException, InterruptedException, Exception {
+  public void CrossTabRep() throws IOException, InterruptedException, Exception {
 	  LoginPage lpage = new LoginPage(driver);
 	  lpage.login("qauser40", "QA0505qa",false);
 	  AHRW reportwriter = new AHRW(driver);
