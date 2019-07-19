@@ -9,7 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class SearchMeasureOrSubset {
+import com.truven.advantagesuite.testcase.RecordListing;
+
+public class SearchMeasureOrSubset  {
 	
 
 		WebDriver driver;
@@ -20,14 +22,33 @@ public class SearchMeasureOrSubset {
 			
 			@FindBy(xpath="//*[@id=\"search\"]/div/div/div[2]/button")
 			WebElement SearchBtn;
+			
+			@FindBy(xpath="//*[@id=\"search\"]/div/div/div[1]/button")
+			WebElement Dropdown;
+			
+			@FindBy(xpath="//*[@name='Measures']")
+			WebElement DropdownMeasure;
+			
+			@FindBy(name="Subsets")
+			WebElement DropdownSubset;
+			
+			
 		
 	public SearchMeasureOrSubset(WebDriver driver) {
 		this.driver = driver;
         PageFactory.initElements(driver, this);		
 	}
 	public void SearchMeasureorSubset(String MeasureOrSubset) throws InterruptedException {
+		//, String x
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 	    wait.until(ExpectedConditions.elementToBeClickable(SearchBox));
+	    Dropdown.click();
+	    Thread.sleep(1000);
+	    /*if(x=="s") {
+	    	DropdownSubset.click();
+	    }else  {
+	    	DropdownMeasure.click();
+	    }*/
 		SearchBox.sendKeys(MeasureOrSubset);
 		SearchBtn.click();
 		WebElement searchitem = driver.findElement(By.xpath("//*[text()='" +MeasureOrSubset+"']"));

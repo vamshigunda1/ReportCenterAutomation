@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.truven.advantagesuite.testcase.NewTest">
+      <class name="com.truven.advantagesuite.testcase.RecordListing">
         <methods>
-          <include name="SaveAndCompareDesc"/>
           <include name="setup"/>
           <include name="teardown"/>
+          <include name="RecordListingRep"/>
         </methods>
-      </class> <!-- com.truven.advantagesuite.testcase.NewTest -->
+      </class> <!-- com.truven.advantagesuite.testcase.RecordListing -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

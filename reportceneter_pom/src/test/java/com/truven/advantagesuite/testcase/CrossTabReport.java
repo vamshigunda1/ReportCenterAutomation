@@ -38,10 +38,10 @@ public class CrossTabReport {
 	  selector.PackageSelector("Adv zero six five new demo data build Package");
 	  		//"Zero Two Two One New Commercial Demo build Package");
 	  SearchMeasureOrSubset rcs = new SearchMeasureOrSubset(driver);
-	  rcs.SearchMeasureorSubset("Patients BMI Assessment Adult Num {QM}");
-	  rcs.SearchMeasureorSubset("Patients BMI Assessment Adult Den {QM}");
-	  rcs.SearchMeasureorSubset("Body Mass Index Adult Rate {QM}");
-	  rcs.SearchMeasureorSubset("Body Mass Index Assessment Adult {QS}");
+	  rcs.SearchMeasureorSubset("Patients BMI Assessment Adult Num {QM}","m");
+	  rcs.SearchMeasureorSubset("Patients BMI Assessment Adult Den {QM}","m");
+	  rcs.SearchMeasureorSubset("Body Mass Index Adult Rate {QM}","m");
+	  rcs.SearchMeasureorSubset("Body Mass Index Assessment Adult {QS}","s");
 	  SelectTimePeriod tp = new SelectTimePeriod(driver);
 	  tp.TimePeriod();
 	  RunNSaveReport rs = new RunNSaveReport(driver);

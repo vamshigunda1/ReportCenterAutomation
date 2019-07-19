@@ -2,6 +2,7 @@ package com.truven.advantagesuite.pages;
 
 import java.io.File;
 import java.io.FileInputStream;
+
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
@@ -36,15 +37,14 @@ public class LoginPage{
 	
 	public LoginPage(WebDriver driver){
 		this.driver = driver;
-
-	       
-
         PageFactory.initElements(driver, this);
 	}
 	
 	public void login(boolean siam) throws Exception{
+		
 		File src=new File("C:\\EclipseWorkspace\\ReportCenterAutomation\\reportceneter_pom\\ddlex.xlsx");
 	     FileInputStream finput = new FileInputStream(src);
+	     
 		XSSFWorkbook wb =new XSSFWorkbook(finput);
 	     XSSFSheet sheet1 = wb.getSheetAt(0);
 	     String username = sheet1.getRow(1).getCell(0).getStringCellValue();

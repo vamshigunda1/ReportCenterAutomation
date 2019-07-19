@@ -22,6 +22,19 @@ public class RunNSaveReport {
 		@FindBy(xpath="//*[@id=\"main-toolbar-button-container\"]/div[2]")
 		WebElement SaveBtn;
 		
+		@FindBy(id="htmlFormat")
+		WebElement HtmlRadioBtn;
+		
+		@FindBy(id="excelFormat")
+		WebElement ExcelRadioBtn;
+		
+		@FindBy(id="textFormat")
+		WebElement DelimitedCSVRadioBtn;
+		
+		@FindBy(id="formatSelector-ok-button")
+		WebElement OkBtnForRadioBtn;
+	
+		
 	public RunNSaveReport(WebDriver driver){
 		this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -32,7 +45,16 @@ public class RunNSaveReport {
 		WebDriverWait wait = new WebDriverWait(driver, 300);
 	    wait.until(ExpectedConditions.visibilityOf(ExcelBtn));
 	}
+	public void runRecList() {
+		RunBtn.click();
+		HtmlRadioBtn.click();
+		OkBtnForRadioBtn.click();
+	}
+	
+	
 	public void saveReport() throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, 300);
+		wait.until(ExpectedConditions.visibilityOf(ExcelBtn));
 		SaveBtn.click();
 		Thread.sleep(2000);
 		Actions ac = new Actions(driver);
