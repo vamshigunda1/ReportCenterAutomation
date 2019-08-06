@@ -15,7 +15,6 @@ import org.testng.annotations.BeforeTest;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
@@ -43,12 +42,10 @@ public class RecordListing {
 	  SelectRecordListing rl = new SelectRecordListing(driver);
 	  rl.SelRecordListing();
 	  SearchMeasureOrSubset rcs = new SearchMeasureOrSubset(driver);
-	  rcs.SearchMeasureorSubset("Admissions");
-	  rcs.SearchMeasureorSubset("Acute Admissions");
-	  //rcs.SearchMeasureorSubset("Admissions", "m");
-	 // rcs.SearchMeasureorSubset("Admissions", "s");
+	  rcs.SearchMeasure("Admissions");
+	  rcs.SearchSubset("Admissions");
 	  SelectTimePeriod tp = new SelectTimePeriod(driver);
-	  tp.TimePeriod();
+	  tp.RecListTimePeriod();
 	  RunNSaveReport rs = new RunNSaveReport(driver);
 	  rs.runRecList();
 	  rs.saveReport();

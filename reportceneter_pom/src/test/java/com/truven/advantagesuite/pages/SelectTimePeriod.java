@@ -18,6 +18,10 @@ public class SelectTimePeriod {
 	 
 	 @FindBy(id="reno-ALL.INCURRED")
 	 	WebElement AllIncurred;
+	 
+	 @FindBy(id="reno-ALL.PAID")
+	 	WebElement AllPaid;
+	 
 		
 		
 	public SelectTimePeriod(WebDriver driver){
@@ -29,7 +33,6 @@ public class SelectTimePeriod {
 		Thread.sleep(1000);
 		Actions ac = new Actions(driver);
 	//ac.doubleClick(AllIncurred).perform();
-		
 		
 	/*String Dimension = sheet1.getRow(i).getCell(1).getStringCellValue();
     System.out.println(Dimension);
@@ -43,7 +46,7 @@ public class SelectTimePeriod {
 			Point dimpoint = AllIncurred.getLocation();
 			int dimsourceX = dimpoint.getX() + 50;
 			int dimsourceY = dimpoint.getY() + 121;
-			System.out.println("cod" + dimsourceX + "," + dimsourceY);
+			//System.out.println("cod" + dimsourceX + "," + dimsourceY);
 			Thread.sleep(1000);
 			robot.mouseMove(dimsourceX, dimsourceY);
 			Thread.sleep(2000);
@@ -54,5 +57,11 @@ public class SelectTimePeriod {
 			robot.mouseRelease(InputEvent.BUTTON1_MASK);
 			Thread.sleep(2000);
 			
+	}
+	public void RecListTimePeriod() throws InterruptedException {
+		TimePeriodTab.click();
+		Actions ac = new Actions(driver);
+		ac.doubleClick(AllPaid).perform();
+		Thread.sleep(2000);
 	}
 }

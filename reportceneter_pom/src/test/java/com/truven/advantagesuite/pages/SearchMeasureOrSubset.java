@@ -9,8 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.truven.advantagesuite.testcase.RecordListing;
-
 public class SearchMeasureOrSubset  {
 	
 
@@ -38,20 +36,30 @@ public class SearchMeasureOrSubset  {
 		this.driver = driver;
         PageFactory.initElements(driver, this);		
 	}
-	public void SearchMeasureorSubset(String MeasureOrSubset) throws InterruptedException {
-		//, String x
+	public void SearchMeasure(String Measure) throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 	    wait.until(ExpectedConditions.elementToBeClickable(SearchBox));
 	    Dropdown.click();
 	    Thread.sleep(1000);
-	    /*if(x=="s") {
-	    	DropdownSubset.click();
-	    }else  {
-	    	DropdownMeasure.click();
-	    }*/
-		SearchBox.sendKeys(MeasureOrSubset);
+	    DropdownMeasure.click();
+	  	SearchBox.sendKeys(Measure);
 		SearchBtn.click();
-		WebElement searchitem = driver.findElement(By.xpath("//*[text()='" +MeasureOrSubset+"']"));
+		WebElement searchitem = driver.findElement(By.xpath("//*[text()='" +Measure+"']"));
+		Actions ac = new Actions(driver);
+		ac.doubleClick(searchitem).perform();
+		Thread.sleep(1000);
+		SearchBox.clear();
+	}
+	public void SearchSubset(String Subset) throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+	    wait.until(ExpectedConditions.elementToBeClickable(SearchBox));
+	    Dropdown.click();
+	    Thread.sleep(1000);
+	    DropdownSubset.click();
+	    SearchBox.clear();
+		SearchBox.sendKeys(Subset);
+		SearchBtn.click();
+		WebElement searchitem = driver.findElement(By.xpath("//*[text()='" +Subset+"']"));
 		Actions ac = new Actions(driver);
 		ac.doubleClick(searchitem).perform();
 		Thread.sleep(1000);
